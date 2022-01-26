@@ -1,0 +1,10 @@
+#container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#container>div {
+  height: 5em;
+  width: 5em;
+  background-color: purple;
+}
