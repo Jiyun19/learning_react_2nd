@@ -47,7 +47,7 @@ ${article.body}
 </footer>
 </section>
 `;
-*/
+
 
 function logCompliment() {
   console.log("You're doing great!");
@@ -74,3 +74,34 @@ const logCompliment4 =function(firstname, message){
 };
 
 logCompliment4("Molly!", "Hello~");
+
+*/
+
+const createCompliment = function (firstName, message) {
+  return `${firstName}: ${message}`;
+};
+
+createCompliment('Molly', "You're so cool");
+console.log(createCompliment('Molly', "You're so cool"));
+
+function logActivity(name = 'Shane McConkey', activity = 'skiing') {
+  console.log(`${name} loves ${activity}`);
+}
+logActivity();
+logActivity('Jiyun', 'coding');
+
+const defaultPerson = {
+  name: {
+    first: 'Shane',
+    last: 'McConkey',
+  },
+  favActivity: 'skiing',
+};
+
+function logActivity2(person = defaultPerson) {
+  console.log(`${person.name.first} loves ${person.favActivity}`);
+}
+
+logActivity2();
+
+//Arrow Functions
