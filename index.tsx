@@ -75,7 +75,7 @@ const logCompliment4 =function(firstname, message){
 
 logCompliment4("Molly!", "Hello~");
 
-*/
+
 
 const createCompliment = function (firstName, message) {
   return `${firstName}: ${message}`;
@@ -105,3 +105,38 @@ function logActivity2(person = defaultPerson) {
 logActivity2();
 
 //Arrow Functions
+const lordify =function(firstName){
+  return `${firstName} of Canterbury`
+};
+
+console.log(lordify("Dale"));
+
+const lordify2 = firstName =>`${firstName} of Canterbury`
+console.log(lordify2("Jiyun"));
+
+const lordify3 = (firstName, land)=>`${firstName} of ${land}`;
+
+console.log(lordify3("Don","Picastaway"));
+
+const lordify4 = (firstName, land) => {
+  if(!firstName){
+    throw new Error("A firstName is required to lordify");}
+
+  if(!land){
+    throw new Error("A lord must have a land");
+  }
+  return `${firstName} of ${land}`
+}
+
+console.log(lordify4("Kelly", "Sonoma"));
+console.log(lordify4("Kelly"));
+
+*/
+const person = (firstName, lastName) => ({
+  first: firstName,
+  last: lastName,
+});
+
+console.log(person('Flad', 'Hanson'));
+
+//ARROW FUNCTIONS AND SCOPE
