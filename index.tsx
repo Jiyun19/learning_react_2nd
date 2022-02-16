@@ -131,7 +131,7 @@ const lordify4 = (firstName, land) => {
 console.log(lordify4("Kelly", "Sonoma"));
 console.log(lordify4("Kelly"));
 
-*/
+
 const person = (firstName, lastName) => ({
   first: firstName,
   last: lastName,
@@ -140,3 +140,34 @@ const person = (firstName, lastName) => ({
 console.log(person('Flad', 'Hanson'));
 
 //ARROW FUNCTIONS AND SCOPE
+
+const tahoe={
+  mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+  print: function(delay=1000){
+    setTimeout(() =>{
+      console.log(this.mountains.join(","));}, delay);
+    }
+  };
+  
+  tahoe.print();
+
+const sandwich={
+  bread: "dutch crunch",
+  meat: "tuna",
+  cheese: "swiss",
+  toppings:["lettuce", "tomato", "mustard"]
+};
+const {bread,meat} =sandwich;
+console.log(bread, meat)
+*/
+
+const lordify = regularPerson => {
+  console.log(`${regularPerson.firstname} of Canterbury`);
+};
+
+const regularPerson ={
+  firstname:"Bill",
+  lastname: "Wilson"
+};
+
+lordify(regularPerson);
