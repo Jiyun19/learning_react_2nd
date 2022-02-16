@@ -196,3 +196,12 @@ const[ , , thirdAnimal]=["Horse", "Mouse", "Cat"];
 console.log(thirdAnimal);
 
 */
+
+const name ="Tallac";
+const elevation =9378;
+const print=function(){
+  console.log(`Mt.${this.name} is ${this.elevation} feet tall`);
+};
+
+const funHike = {name,elevation, print};
+funHike.print();
