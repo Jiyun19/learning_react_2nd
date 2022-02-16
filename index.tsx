@@ -226,7 +226,7 @@ console.log(peaks.join(", "));
 const lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"];
 const [first, ...others]= lakes;
 console.log(others.join(", "));
-*/
+
 
 function directions(...args){
   let [start, ...remaining]=args;
@@ -240,3 +240,21 @@ function directions(...args){
 }
  
 directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma");
+
+
+const morning ={
+  breakfast: "oatmeal",
+  lunch: "peanut butter and jelly"
+};
+
+const dinner="mac and cheese";
+
+const backpackingMeals ={...morning, dinner};
+console.log(backpackingMeals);
+
+*/
+fetch("https://api.randomuser.me/?nat=US&results=1")
+.then(res => res.json())
+.then(json => json.results)
+.then(console.log)
+.catch(console.error);
