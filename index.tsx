@@ -195,7 +195,7 @@ console.log(firstAnimal);
 const[ , , thirdAnimal]=["Horse", "Mouse", "Cat"];
 console.log(thirdAnimal);
 
-*/
+
 
 const name ="Tallac";
 const elevation =9378;
@@ -205,3 +205,38 @@ const print=function(){
 
 const funHike = {name,elevation, print};
 funHike.print();
+
+const peaks = ["Tallac", "Ralston", "Rose"];
+const canyons = ["Ward", "Blackwood"];
+const tahoe=[...peaks, ...canyons];
+
+console.log(tahoe.join(","));
+
+const peaks=["Tallac", "Ralston", "Rose"];
+const[last]=peaks.reverse();
+console.log(last);
+console.log(peaks.join(", "));
+
+const peaks=["Tallac", "Ralston", "Rose"];
+const [last]=[...peaks].reverse();
+console.log(last);
+console.log(peaks.join(", "));
+
+
+const lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"];
+const [first, ...others]= lakes;
+console.log(others.join(", "));
+*/
+
+function directions(...args){
+  let [start, ...remaining]=args;
+  let [finish, ...stops]=remaining.reverse();
+
+  console.log(`drive through ${args.length} town`);
+  console.log(`start in ${start}`);
+  console.log(`the destination is ${finish}`);
+  console.log(`stopping ${stops.length} times in between`);
+
+}
+ 
+directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma");
