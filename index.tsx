@@ -159,7 +159,7 @@ const sandwich={
 };
 const {bread,meat} =sandwich;
 console.log(bread, meat)
-*/
+
 
 const lordify = regularPerson => {
   console.log(`${regularPerson.firstname} of Canterbury`);
@@ -171,3 +171,28 @@ const regularPerson ={
 };
 
 lordify(regularPerson);
+
+
+const regularPerson ={
+  firstname:"Bill",
+  lastname:"Wilson",
+  spouse: {
+    firstname: "Phil",
+    lastname: "Wilson"
+  }
+};
+
+const lordify =({spouse :{firstname}})=>{
+  console.log(`${firstname} of Canterbury`)
+};
+
+lordify(regularPerson);
+
+
+const [firstAnimal]= ["Horse", "Mouse", "Cat"];
+console.log(firstAnimal);
+
+const[ , , thirdAnimal]=["Horse", "Mouse", "Cat"];
+console.log(thirdAnimal);
+
+*/
